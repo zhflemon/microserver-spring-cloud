@@ -1,6 +1,5 @@
 package com.lgd.micro.consul;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -23,13 +22,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConsulApplication {
 
-    @RequestMapping("/hi")
-    public String home() {
-        return "hi ,i'm miya";
-    }
+	@RequestMapping("/hi")
+	public String home() {
+		return "hi ,i'm miya";
+	}
 
-    public static void main(String[] args) {
-        //SpringApplication.run(ConsulApplication.class, args);
-        new SpringApplicationBuilder(ConsulApplication.class).web(true).run(args);
-    }
+	public static void main(String[] args) {
+		// SpringApplication.run(ConsulApplication.class, args);
+		new SpringApplicationBuilder(ConsulApplication.class).web(true).run(args);
+	}
 }

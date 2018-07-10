@@ -1,88 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lgd.microserver</groupId>
-    <artifactId>microserver-spring-cloud</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+	<groupId>com.lgd.microserver</groupId>
+	<artifactId>microserver-spring-cloud</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
 
-    <modules>
-        <module>spring-cloud-eureka-server</module>
-        <module>movie-prodiver</module>
-        <module>movie-consumer</module>
-        <module>spring-cloud-eureka-client</module>
-        <module>spring-cloud-eureka-client2</module>
-        <module>spring-cloud-ribbon</module>
-        <module>spring-cloud-feign</module>
-        <module>spring-cloud-hystrix</module>
-        <module>spring-cloud-feign-hystrix</module>
-        <module>spring-cloud-zuul</module>
-        <module>spring-cloud-config-server</module>
-        <module>spring-cloud-config-client</module>
-        <module>spring-cloud-config-eureka-server</module>
-        <module>spring-cloud-bus</module>
-        <module>spring-cloud-bus2</module>
-        <module>spring-cloud-zipkin-server</module>
-        <module>spring-cloud-zipkin-hi</module>
-        <module>spring-cloud-zipkin-miya</module>
-        <module>spring-cloud-eureka-server-ha1</module>
-        <module>spring-cloud-eureka-server-ha2</module>
-        <module>spring-cloud-eureka-client-ha</module>
-        <module>spring-cloud-consul</module>
-        <module>spring-cloud-eureka-client-dashboard</module>
-        <module>spring-cloud-eureka-client-lucy</module>
-        <module>spring-cloud-eureka-service-turbine</module>
-        <module>spring-cloud-eureka-server-docker</module>
-        <module>spring-cloud-eureka-client-docker</module>
-    </modules>
+	<modules>
+		<module>spring-cloud-eureka-server</module>
+		<module>movie-prodiver</module>
+		<module>movie-consumer</module>
+		<module>spring-cloud-eureka-client</module>
+		<module>spring-cloud-eureka-client2</module>
+		<module>spring-cloud-ribbon</module>
+		<module>spring-cloud-feign</module>
+		<module>spring-cloud-hystrix</module>
+		<module>spring-cloud-feign-hystrix</module>
+		<module>spring-cloud-zuul</module>
+		<module>spring-cloud-config-server</module>
+		<module>spring-cloud-config-client</module>
+		<module>spring-cloud-config-eureka-server</module>
+		<module>spring-cloud-bus</module>
+		<module>spring-cloud-bus2</module>
+		<module>spring-cloud-zipkin-server</module>
+		<module>spring-cloud-zipkin-hi</module>
+		<module>spring-cloud-zipkin-miya</module>
+		<module>spring-cloud-eureka-server-ha1</module>
+		<module>spring-cloud-eureka-server-ha2</module>
+		<module>spring-cloud-eureka-client-ha</module>
+		<module>spring-cloud-consul</module>
+		<module>spring-cloud-eureka-client-dashboard</module>
+		<module>spring-cloud-eureka-client-lucy</module>
+		<module>spring-cloud-eureka-service-turbine</module>
+		<module>spring-cloud-eureka-server-docker</module>
+		<module>spring-cloud-eureka-client-docker</module>
+	</modules>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <!--<version>1.4.1.RELEASE</version>-->
-        <version>1.5.2.RELEASE</version>
-    </parent>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!--<version>1.4.1.RELEASE</version> -->
+		<version>1.5.2.RELEASE</version>
+	</parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
 
-    <!-- 引入spring cloud的依赖 -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <!--<version>Camden.SR1</version>-->
-                <version>Dalston.SR4</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-    </dependencies>
-    </dependencyManagement>
+	<!-- 引入spring cloud的依赖 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<!--<version>Camden.SR1</version> -->
+				<version>Dalston.SR4</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.20</version>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-        </plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20</version><!--$NO-MVN-MAN-VER$ -->
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
 
 
-    </build>
+	</build>
 
 </project>
